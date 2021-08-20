@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>QUERY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>QUERY FORM</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="HOST" name="host" value="{{
+          request.form.host }}">
+         <input type="text" placeholder="PORT" name="port" value="{{
+          request.form.port }}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if result %}
+        <p class="result"><strong>Result:</strong> {{ result }}
+      {% endif %}
+    </div>
+  </body>
+</html>
